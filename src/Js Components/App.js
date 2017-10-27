@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
-import '../Css Components/Banner.css';
+import Banner from './Banner.js';
+import navbarInstance from './Nav.js';
 
 class App extends Component {
   render() {
     return (
-      <div className="Banner">
-        <div className="Banner__image">
-          <header className="Banner__header">
-            <h1>Feral Foliage</h1>
-          </header>
-            <p className="Banner__description"> Experience the Untamed Landscape </p>
-        </div>
+
+      <div>
+        <Banner />
       </div>
     );
   }
