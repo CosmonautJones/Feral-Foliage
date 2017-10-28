@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
 import '../Css Components/Nav.css';
-import { Button } from 'react-bootstrap'
+import { Button } from 'react-bootstrap';
+import { ButtonToolbar } from 'react-bootstrap';
 
 class NavComponent extends Component{
   constructor(props) {
@@ -12,9 +12,11 @@ class NavComponent extends Component{
       <nav>
         <div className='navWide'>
           <div className='wideDiv'>
-          <a href='#'>Link 1</a>
-          <a href='#'>Link 2</a>
-          <a href='#'>Link 3</a>
+            <ButtonToolbar>
+              <Button bsStyle ="success" a href='http://google.com' target="_blank">Google </Button>
+              <Button bsStyle ="success" a href='#'>Link 1 </Button>
+              <Button bsStyle ="success" a href='#'>Link 2 </Button>
+            </ButtonToolbar>
           </div>
         </div>
         <div className='navNarrow'>
