@@ -8,49 +8,6 @@ import { NavItem } from 'react-bootstrap';
 import { NavDropdown } from 'react-bootstrap';
 import { MenuItem } from 'react-bootstrap';
 
-
-// class NavComponent extends Component{
-//   constructor(props) {
-//     super(props);
-//   }
-//   render() {
-//     return (
-//       <nav>
-//         <div className='navWide'>
-//           <div className='wideDiv'>
-//             <ButtonToolbar>
-//               <Button bsStyle ="success" a href='http://google.com' target="_blank">Google </Button>
-//               <Button bsStyle ="success" a href='#'>Link 1 </Button>
-//               <Button bsStyle ="success" a href='#'>Link 2 </Button>
-//             </ButtonToolbar>
-//           </div>
-//         </div>
-//         <div className='navNarrow'>
-//           <i className='fa-paper-plane'></i>
-//             <div className='narrowLinks'>
-//             <a href='#' onClick={this.linkToggle}>Link 1</a>
-//             <a href='#' onClick={this.linkToggle}>Link 2</a>
-//             <a href='#' onClick={this.linkToggle}>Link 3</a>
-//             </div>
-//           </div>
-//         </nav>
-//     );
-//   }
-// }
-
-
-//   linkToggle() {
-//     let linksE1 = document.querySelector('.narrowLinks');
-//     if(linksE1.style.display === 'block') {
-//       linksE1.style.display = 'none';
-//     } else {
-//       linksE1.style.display = 'block';
-//     }
-//   }
-// };
-
-// export default NavComponent
-
  class NavComponent extends Component{
     constructor(props) {
       super(props);
@@ -66,8 +23,8 @@ import { MenuItem } from 'react-bootstrap';
     </Navbar.Header>
     <Navbar.Collapse>
       <Nav>
-        <NavItem eventKey={1} href="#">Link</NavItem>
-        <NavItem eventKey={2} href="#">Link</NavItem>
+        <NavItem eventKey={1} href="#">Link1</NavItem>
+        <NavItem eventKey={2} href="#">Link2</NavItem>
         <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
           <MenuItem eventKey={3.1}>Action</MenuItem>
           <MenuItem eventKey={3.2}>Another action</MenuItem>
@@ -77,7 +34,7 @@ import { MenuItem } from 'react-bootstrap';
         </NavDropdown>
       </Nav>
       <Nav pullRight>
-        <NavItem eventKey={1} href="#">Link Right</NavItem>
+        <NavItem eventKey={1} href="#">Link Left</NavItem>
         <NavItem eventKey={2} href="#">Link Right</NavItem>
       </Nav>
     </Navbar.Collapse>
