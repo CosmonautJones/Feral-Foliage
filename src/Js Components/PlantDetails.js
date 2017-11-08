@@ -1,29 +1,32 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { grabPlantDetails } from '../actions/actions';
 
 class PlantDetails extends Component {
+    
+
     render() {
-        if (!this.props.plant) {
+        console.log('are you with me?');
+        if (!this.props.targetPlant) {
             return <h2>Growing your Plant...</h2>;
         } else {
             return (
                 <div>
-                    <h1> Details for {this.props.plant.family} </h1>
+                    <h1> Details for {this.props.targetPlant.family} </h1>
                 </div>
             );
         }
     }
     componentDidMount() {
         const id = this.props.match.params.id;
-        this.props.grabPlantDetails(id);
+        this.props.getPlantDetails(id);
     }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
     return {
-        plants: state.targetPlant,
+        targetPlant: state.targetPlant,
     };
 };
 

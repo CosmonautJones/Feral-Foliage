@@ -36,6 +36,7 @@ const plants = [
 		zone: 5-9,
 		companions: ['Azalea', 'Jasmine', 'Rhododendon'],
 	},
+	
 ];
 
 app.get('/plants', (req, res) => {

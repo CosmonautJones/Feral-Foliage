@@ -8,4 +8,4 @@ export const plantsReducer = (plants = [], action) => {
         default:
           return plants;
     }
-}
+};
