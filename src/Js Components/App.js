@@ -1,16 +1,26 @@
 import React, { Component } from 'react';
-import Banner from './Banner.js';
-// import NavbarInstance from './Nav.js';
+import {
+  BrowserRouter as Router, Route
+} from 'react-router-dom';
 
-import AddUser from '../Redux Components/UserForm';
+import Banner from './Banner';
+import PlantsList from './PlantsList';
+import PlantDetails from './PlantDetails';
+
+
+// import NavbarInstance from './Nav.js';
 
 class App extends Component {
   render() {
     return (
-      <div>
-        {/* <NavbarInstance />  */}
-        <Banner />
-      </div>
+      <Router>
+        <div>
+          {/* <NavbarInstance />  */}
+          <Route exact path ='/' component={PlantsList} />
+          <Route exact path='/movies/:id' component={PlantDetails} />
+          <Banner />
+        </div>
+      </Router>
     );
   }
 }

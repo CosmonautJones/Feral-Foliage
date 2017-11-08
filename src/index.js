@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 
 import App from './Js Components/App';
-import reducers from './Redux Reducers';
+import rootReducer from './reducers';
   
 const configureStore = applyMiddleware(ReduxPromise)(createStore);
 const store = configureStore(
@@ -19,7 +19,7 @@ const store = configureStore(
 
 ReactDOM.render(
 	<Provider store={store}>
-      <App />
+        <App />
 	</Provider>,
 	document.getElementById('root')
 );
